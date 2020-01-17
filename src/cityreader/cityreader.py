@@ -44,8 +44,9 @@ def cityreader(cities=[]):
                 continue
             else:
                 name = line[0]
-                lat = line[3]
-                lon = line[4]
+                lat = float(line[3])
+                lon = float(line[4])
+                print(name, lat, lon)
                 city = City(name, lat, lon)
                 cities.append(city)
     return cities
